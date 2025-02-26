@@ -13,7 +13,7 @@ A React TypeScript chatbot application that allows users to browse stock exchang
 
 1. Clone the repository
  
-    `git clone https://github.com/yourusername/stock-exchange-chatbot.git`
+    `git clone https://github.com/elenaionescu/stock-exchange-chatbot.git`
     `cd stock-exchange-chatbot`
 
 2. Install dependencies

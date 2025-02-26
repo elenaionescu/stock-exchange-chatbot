@@ -16,8 +16,8 @@ describe('Chatbot Flow Integration', () => {
 
         // Wait a moment for UI to update
         const stockButtons = await screen.findAllByRole('button');
-        const appleButton = stockButtons.find(btn => btn.textContent === 'APPLE INC');
-        if (!appleButton) throw new Error('Apple button not found');
+        const appleButton = stockButtons.find(btn => btn.textContent === 'Advanced Micro Devices, Inc.');
+        if (!appleButton) throw new Error('Advanced Micro Devices button not found');
         fireEvent.click(appleButton);
 
         const navigationButtons = await screen.findAllByRole('button');
@@ -27,8 +27,8 @@ describe('Chatbot Flow Integration', () => {
         fireEvent.click(goBackButton);
 
         const updatedStockButtons = await screen.findAllByRole('button');
-        const microsoftButtons = updatedStockButtons.filter(btn => btn.textContent === 'MICROSOFT CORP');
-        if (microsoftButtons.length === 0) throw new Error('Microsoft button not found');
+        const microsoftButtons = updatedStockButtons.filter(btn => btn.textContent === 'Tesla, Inc.');
+        if (microsoftButtons.length === 0) throw new Error('Tesla button not found');
         // Click the first Microsoft button
         fireEvent.click(microsoftButtons[0]);
 
